@@ -103,9 +103,6 @@
     "--"
 ] @operator
 
-[
-    (line_comment)
-    (block_comment)
-] @comment
+(comment) @comment
 
 (ERROR) @error

@@ -18,20 +18,15 @@ module.exports = grammar({
     word: $ => $.identifier,
 
     extras: $ => [
-        $.line_comment,
-        $.block_comment,
+        $.comment,
         // https://github.com/tree-sitter/tree-sitter-javascript/blob/2c5b138ea488259dbf11a34595042eb261965259/grammar.js#L11
         /[\s\uFEFF\u2060\u200B\u00A0]/
-    ],
-
-    externals: $ => [
-        $.block_comment,
     ],
 
     rules: {
         source_file: $ => seq(repeat($.enable_directive), repeat($._declaration)),
 
-        line_comment: $ => token(seq('//', /.*/)),
+        comment: $ => seq("//", /.*/),
 
         _declaration: $ => choice(
             ";",

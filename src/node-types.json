@@ -404,6 +404,11 @@
     }
   },
   {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "composite_value_decomposition_expression",
     "named": true,
     "fields": {
@@ -1961,6 +1966,10 @@
     "named": false
   },
   {
+    "type": "//",
+    "named": false
+  },
+  {
     "type": "/=",
     "named": false
   },
@@ -2035,10 +2044,6 @@
   {
     "type": "bitcast",
     "named": false
-  },
-  {
-    "type": "block_comment",
-    "named": true
   },
   {
     "type": "bool",
@@ -2123,10 +2128,6 @@
   {
     "type": "let",
     "named": false
-  },
-  {
-    "type": "line_comment",
-    "named": true
   },
   {
     "type": "loop",
